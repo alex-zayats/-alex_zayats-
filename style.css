@@ -1,0 +1,17 @@
+	.mainForm {
+	    width: 1024px;
+	    margin: 0 auto;
+	}
+	
+	input.ng-invalid.ng-touched {
+	    background-color: #FA787E;
+	}
+	
+	input.ng-valid.ng-touched {
+	    background-color: #78FA89;
+	}
+
+	form.ng-invalid.ng-submitted{
+		border: 1px solid red;
+		border-color: red;
+	}

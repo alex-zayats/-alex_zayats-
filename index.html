@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+    <head>
+        <title>angular-training</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="node_modules/angular/angular.js"></script>
+    </head>
+    <body>
+        <form class="css-form" name="mainForm" novalidate ng-controller="formController">
+            <div class="form-group">
+                <label for="userName">Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="name" ng-pattern="/^[A-Z]\S{2,}\s{0,1}[A-Z]{0,1}\S{0,}$/" ng-model="user.name" required>
+            </div>
+            <div class="form-group">
+                <label for="userAge">Age</label>
+                <input type="number" class="form-control" id="userAge" placeholder="age" ng-model="user.age" age-directive>
+            </div>
+            <div class="form-group">
+                <label for="userDate">Date</label>
+                <input type="text" class="form-control" id="userDate" placeholder="date" ng-model="user.date" ng-pattern="/^[1-4]\d{1}[.][1][1-2][.][1-2][0-9]\d{2}$/" required>
+            </div>
+            <div class="form-group">
+                <label for="userText">Text</label>
+                <input type="text" class="form-control" id="userText" placeholder="text" ng-model="user.text" >
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <div ng-show="mainForm.$valid && mainForm.$submitted">
+                {{user.name}}
+                {{user.age}}
+                {{user.date}}
+                {{user.text}}
+            </div>
+        </form>
+
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
