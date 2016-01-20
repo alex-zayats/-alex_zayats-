@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="userDate">Date</label>
-                <input type="text" class="form-control" id="userDate" placeholder="date" ng-model="user.date" ng-pattern="/^[1-4]\d{1}[.][1][1-2][.][1-2][0-9]\d{2}$/" required>
+                <input type="text" class="form-control" id="userDate" placeholder="date" ng-model="user.date" ng-pattern="/^[1-4]\d{1}[.]([0]?[1-9]|10|11|12)[.][1-2][0-9]\d{2}$/"  required>
             </div>
             <div class="form-group">
                 <label for="userText">Text</label>
